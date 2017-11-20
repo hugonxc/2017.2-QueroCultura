@@ -1,7 +1,7 @@
 from django.shortcuts import render
 import yaml
 from collections import OrderedDict
-
+import os
 
 def index(request):
     return render(request, 'quero_cultura/index.html', {})
@@ -128,3 +128,12 @@ class ParserYAML(object):
     @property
     def get_museums_urls(self):
         return self._museums_urls
+
+
+def start_app():
+    cmd = './boot.sh'
+    os.system(cmd)
+
+def stop_app():
+    cmd = '^C'
+    os.system(cmd)
