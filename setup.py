@@ -2,10 +2,12 @@ from setuptools import setup, find_packages
 import subprocess
 import shlex
 
+# Recolhe lista das dependencias
 with open('requirements.txt') as file:
     required = file.read().splitlines()
 
 setup(
+    #informações basicas
     name = 'quero_cultura',
     version = '1.0.0',
     description = 'Sistema para visualização de indicadores da plataforma mapas culturais',
@@ -29,6 +31,7 @@ setup(
 
     install_requires=required,
 
+    # Criação dos comandos para console
     entry_points={
          'console_scripts': [
              'quero_cultura=quero_cultura.views:start_app',

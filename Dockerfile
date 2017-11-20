@@ -2,8 +2,8 @@ FROM python:3
 
 ENV PYTHONUNBUFFERED 1
 
+# Faz a instalação das dependencias node para o gulp
 RUN apt-get update && \
-    apt-get install -y ansible  && \
     curl -sL https://deb.nodesource.com/setup_8.x  && \
     apt-get install -y nodejs && \
     apt-get install -y npm
