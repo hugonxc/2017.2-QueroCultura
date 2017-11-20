@@ -6,7 +6,6 @@ from .api_connections import RequestEventsRawData
 from quero_cultura.views import build_temporal_indicator
 from quero_cultura.views import ParserYAML
 from datetime import datetime
-from celery.decorators import task
 from quero_cultura.views import sort_dict
 import yaml
 import json
@@ -24,7 +23,7 @@ def index(request):
     per_language = per_language.total_events_per_language
     per_age_range = per_age_range.total_events_per_age_range
     temporal = temporal.total_events_registered_per_mounth_per_year
-    
+
     per_language_keys = []
     per_language_values = []
 
@@ -111,7 +110,6 @@ def build_language_indicator(new_data, old_data):
     return per_language
 
 
-@task(name="update_event_indicator")
 def update_event_indicator():
     parser_yaml = ParserYAML()
     urls = parser_yaml.get_multi_instances_urls

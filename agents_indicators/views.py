@@ -5,7 +5,6 @@ from .models import AmountAgentsRegisteredPerMonth
 from .models import PercentAgentsPerAreaOperation
 from datetime import datetime
 import json
-from celery.decorators import task
 from quero_cultura.views import build_temporal_indicator
 from quero_cultura.views import build_operation_area_indicator
 from quero_cultura.views import sort_dict
@@ -90,7 +89,6 @@ def build_type_indicator(new_data):
     return per_type
 
 
-@task(name="update_agent_indicator")
 def update_agent_indicator():
     url = "http://mapas.cultura.gov.br/api/"
 
