@@ -1,1 +1,1 @@
-web: gunicorn djangobasico.wsgi:application --pythonpath djangobasico --log-file -
+web: gunicorn quero_cultura.wsgi:application --pythonpath quero_cultura --log-file -
