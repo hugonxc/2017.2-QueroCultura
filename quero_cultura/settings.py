@@ -133,10 +133,8 @@ CELERY_RESULT_SERIALIZER = 'json'
 CELERY_TIMEZONE = TIME_ZONE
 
 
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/1.11/howto/static-files/
-
+# Static asset configuration
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+STATIC_ROOT = 'staticfiles'
 STATIC_URL = '/static/'
-STATIC_ROOT = '/static/'
-STATICFILES_DIRS = ['quero_cultura/static/',
-                    'agents_indicators/static/']
+STATICFILES_DIRS = ()
