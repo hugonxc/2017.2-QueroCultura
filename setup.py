@@ -32,7 +32,7 @@ setup(
     entry_points={
          'console_scripts': [
              'quero_cultura=quero_cultura.views:start_app',
-             'quero_cultura --stop=quero_cultura.views:stop_app',
+             'quero_cultura_stop=quero_cultura.views:stop_app',
          ],
      },
 )

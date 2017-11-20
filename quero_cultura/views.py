@@ -135,5 +135,5 @@ def start_app():
     os.system(cmd)
 
 def stop_app():
-    cmd = '^C'
+    cmd = 'pkill -f "python3 manage.py runserver"'
     os.system(cmd)
