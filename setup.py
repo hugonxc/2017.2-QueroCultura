@@ -15,13 +15,13 @@ setup(
     url = 'https://github.com/fga-gpp-mds/2017.2-QueroCultura',
     author = 'Hugo Neves e Josué Nascimento',
     author_email = 'hugonvsc@gmail.com',
-    license = 'GPL',
+    license = 'GPL v3.0',
 
     classifiers=[
         'Development Status :: 1 - Alpha',
         'Intended Audience :: Brazilian guys',
         'Topic :: Indicator platform',
-        'License :: OSI Approved :: GPL License',
+        'License :: OSI Approved :: GPL License v3.0',
         'Programming Language :: Python :: 3',
     ],
     keywords='django platform',
