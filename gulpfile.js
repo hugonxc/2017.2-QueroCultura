@@ -45,8 +45,3 @@ gulp.task('watch_update_on_file', function() {
     gulp.watch(paths.js, reload);
     gulp.watch(paths.html, reload);
 });
-
-//Minify JS and CSS
-
-
-//Generate build
