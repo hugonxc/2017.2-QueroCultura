@@ -3,12 +3,13 @@ billiard==3.5.0.3
 celery==4.1.0
 certifi==2017.7.27.1
 chardet==3.0.4
+coverage==4.4.1
+coveralls==1.2.0
 decorator==4.1.2
 Django==1.11.6
 django-celery-beat==1.0.1
 django-celery-results==1.0.1
 docopt==0.6.2
-gunicorn==19.0.0
 idna==2.6
 ipython==6.2.1
 ipython-genutils==0.2.0
@@ -26,6 +27,7 @@ pymongo==3.5.1
 pytest==3.2.3
 pytest-cov==2.5.1
 pytest-django==3.1.2
+python-coveralls==2.9.1
 pytz==2017.2
 PyYAML==3.12
 redis==2.10.6
@@ -36,4 +38,4 @@ traitlets==4.3.2
 urllib3==1.22
 vine==1.1.4
 wcwidth==0.1.7
-whitenoise
+whitenoise==3.3.1

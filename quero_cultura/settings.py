@@ -52,6 +52,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -134,7 +135,14 @@ CELERY_TIMEZONE = TIME_ZONE
 
 
 # Static asset configuration
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-STATIC_ROOT = 'static'
 STATIC_URL = '/static/'
-STATICFILES_DIRS = ()
+
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, "static")
+)
+
+STATIC_ROOT = os.path.join(BASE_DIR, "live-static", "static-root")
+
+MEDIA_URL = "/media/"
+
+MEDIA_ROOT = os.path.join(BASE_DIR, "live-static", "media-root")
